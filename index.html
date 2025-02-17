@@ -8,7 +8,12 @@
         content="Online intelligence and logic tests. Interesting questions, useful for developing thinking. Try your hand at it right now!">
     <meta name="keywords" content="tests, intelligence, logical tasks, online tests, thinking development">
     <title>Online intelligence and logic tests — Chalange yourself</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,5 +47,13 @@
         <p>2025 Online intelligence and logic tests</p>
     </footer>
 
-    <script src="/script.js"></script>
+    <!-- <script src="/script.js"></script> -->
+    <script>
+        document.querySelector("section").addEventListener("click", function (e) {
+            if (e.target.classList.contains("myBtn")) {
+                e.target.nextElementSibling.classList.toggle('hide');
+            }
+        })
+    </script>
+
 </body>
